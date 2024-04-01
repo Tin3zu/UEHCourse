@@ -1,0 +1,59 @@
+﻿@model UEHCourse.Models.Course
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "ThemMoiSanPham";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div class="content-wrapper">
+    <div class="content-header">
+        <h1 style="text-align: left; margin-top: 50px; color:#015D68;">Thêm Sản Phẩm Mới</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <form method="post" asp-action="ThemMoiSanPham">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group">
+                        <label asp-for="CourseId" class="control-label"></label>
+                        <input asp-for="CourseId" class="form-control" />
+                        <span asp-validation-for="CourseId" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="CourseName" class="control-label"></label>
+                        <input asp-for="CourseName" class="form-control" />
+                        <span asp-validation-for="CourseName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="SupplierName" class="control-label"></label>
+                        <input asp-for="SupplierName" class="form-control" />
+                        <span asp-validation-for="SupplierName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="FieldName" class="control-label"></label>
+                        <input asp-for="FieldName" class="form-control" />
+                        <span asp-validation-for="FieldName" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Price" class="control-label"></label>
+                        <input asp-for="Price" class="form-control" />
+                        <span asp-validation-for="Price" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="DateCreated" class="control-label"></label>
+                        <input asp-for="DateCreated" class="form-control" />
+                        <span asp-validation-for="DateCreated" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Status" class="control-label"></label>
+                        <input asp-for="Status" class="form-control" />
+                        <span asp-validation-for="Status" class="text-danger"></span>
+                    </div>
+                    <div class="form-group" >
+                        <input type="submit" value="Create" class="btn btn-default" />
+                        <a class="btn btn-default" href="../admin/danhmucsanpham">Back to List</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<div> 
+</div>

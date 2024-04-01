@@ -1,0 +1,240 @@
+﻿
+@{
+    ViewData["Title"] = "KhoaHoc";
+    Layout = "~/Views/Shared/_LayoutUEH.cshtml";
+}
+
+@using X.PagedList.Mvc.Core;
+@using X.PagedList.Web.Common
+@model X.PagedList.IPagedList<Course>
+
+<section class="breadcrumb-section set-bg" data-setbg="https://img.pikbest.com/backgrounds/20190715/summer-training-course-enrollment-hd-background_1898741.jpg!bw700">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="breadcrumb__text">
+                    <h2 style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Tất Cả Khóa Học</h2>
+                    <div class="breadcrumb__option">
+                        <a href="./index.html">Trang chủ</a>
+                        <span>Khóa học </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Breadcrumb Section End -->
+<!-- Product Section Begin -->
+<section class="product spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-5">
+                <div class="sidebar">
+                    <div class="sidebar__item">
+                        <div id="banner-sidebar">
+                            <img src="../LayoutUser/img/flash1.jpg" alt="Additional Image" class="additional-img">
+                            <img src="../LayoutUser/img/banner.jpg" alt="Banner Khuyến Mãi" class="khuyenmai-img">
+                            <button type="submit" class="dky-btn">ĐĂNG KÝ NGAY</button>
+                        </div>
+
+                        <div class="latest-product__text">
+                            <h4 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Mới Nhất</h4>
+                            <div class="latest-product__slider owl-carousel">
+                                <div class="latest-prdouct__slider__item">
+                                    <a href="#" class="latest-product__item">
+                                        <div class="latest-product__item__pic">
+                                            <img src="https://img.cengroup.vn/images/news/bigimage/3y%E1%BA%BFut%E1%BB%91.jpg" alt="">
+                                        </div>
+                                        <div class="latest-product__item__text">
+                                            <h6 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Khóa CFA Explorer</h6>
+                                            <span>36.500.000 VND</span>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="latest-product__item">
+                                        <div class="latest-product__item__pic">
+                                            <img src="https://ieit.vn/wp-content/uploads/2022/12/Quan-tri-nguon-nhan-luc-1024x512.jpg.webp" alt="">
+                                        </div>
+                                        <div class="latest-product__item__text">
+                                            <h6 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Profesional Human Resource Management </h6>
+                                            <span>34.500.000 VND</span>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="latest-product__item">
+                                        <div class="latest-product__item__pic">
+                                            <img src="https://media.zim.vn/62d13e991b5d34001f08d06e/toeic-la-gi.jpg" alt="">
+                                        </div>
+                                        <div class="latest-product__item__text">
+                                            <h6 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Luyện đề thi TOEIC đầu ra 800+</h6>
+                                            <span>1.800.000 VND</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="latest-prdouct__slider__item">
+                                    <a href="#" class="latest-product__item">
+                                        <div class="latest-product__item__pic">
+                                            <img src="https://net5s.vn/wp-content/uploads/2022/08/digital-marketing-la-gi-1.jpg" alt="">
+                                        </div>
+                                        <div class="latest-product__item__text">
+                                            <h6 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Chuyên viên Digital Marketing Live</h6>
+                                            <span>5.000.000 VND</span>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="latest-product__item">
+                                        <div class="latest-product__item__pic">
+                                            <img src="https://atd.ueh.edu.vn/wp-content/uploads/2023/11/Poster-PBI-1600-x-800-px-2.png" alt="">
+                                        </div>
+                                        <div class="latest-product__item__text">
+                                            <h6 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Xây dựng báo cáo quản trị thông minh với MS Power BI</h6>
+                                            <span>1.100.000 VND</span>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="latest-product__item">
+                                        <div class="latest-product__item__pic">
+                                            <img src="https://atd.ueh.edu.vn/wp-content/uploads/2023/11/Poster-PBI-1600-x-800-px-2.png" alt="">
+                                        </div>
+                                        <div class="latest-product__item__text">
+                                            <h6>SQL for Data Analyst </h6>
+                                            <span>4.200.000 VND</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-7">
+                <div class="product__discount">
+                    <div class="section-title product__discount__title">
+                        <h2>Sale Off</h2>
+                    </div>
+                    <div class="row">
+                        <div class="product__discount__slider owl-carousel">
+                            <div class="col-lg-4">
+                                <div class="product__discount__item">
+                                    <div class="product__discount__item__pic set-bg"
+                                         data-setbg="https://ci3.googleusercontent.com/meips/ADKq_NYgLnd6BKElRRAHCz27zMIJ8ehpwZclFFiPWO7Lh35jjsVm7Gac34jyjomeVuIdsT9HKXmrgcjBrdNDp_K236EH35LVAOaUf-3PQ98RTXFnZirNOF18ecpQOUCQplrc3dEtSglsjpAq3Wxj2YyTOviQIS6051c6af4=s0-d-e1-ft#https://mcusercontent.com/11a273c77cc62fef85060dd76/images/91b86b9b-5dd5-9a40-bbc9-3311377a1849.png">
+                                        <div class="product__discount__percent">-20%</div>
+                                        <ul class="product__item__pic__hover">
+                                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="product__discount__item__text">
+                                        <span>CNTT và Phần Mềm</span>
+                                        <h5><a href="#">Business Analyst In Practices </a></h5>
+                                        <div class="product__item__price">3.200.000 VND <span>3.800.000 VND</span></div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="product__discount__item">
+                                    <div class="product__discount__item__pic set-bg"
+                                         data-setbg="https://dotnetguru.org/wp-content/uploads/2022/02/reactjs.png">
+                                        <div class="product__discount__percent">-20%</div>
+                                        <ul class="product__item__pic__hover">
+                                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="product__discount__item__text">
+                                        <span>CNTT và Phần Mềm</span>
+                                        <h5><a href="#">React Ultimate</a></h5>
+                                        <div class="product__item__price">2.300.000 VND<span>3.000.000 VND</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="product__discount__item">
+                                    <div class="product__discount__item__pic set-bg"
+                                         data-setbg="https://media.geeksforgeeks.org/wp-content/uploads/20231223223806/SQL2.png">
+                                        <div class="product__discount__percent">-20%</div>
+                                        <ul class="product__item__pic__hover">
+                                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="product__discount__item__text">
+                                        <span>CNTT và Phần Mềm</span>
+                                        <h5><a href="#">SQL Advanced</a></h5>
+                                        <div class="product__item__price">1.500.000 VND <span>1.800.000 VND</span></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="product__discount__item">
+                                    <div class="product__discount__item__pic set-bg"
+                                         data-setbg="https://ieit.vn/wp-content/uploads/2022/12/Quan-tri-nguon-nhan-luc-1024x512.jpg.webp">
+                                        <div class="product__discount__percent">-20%</div>
+                                        <ul class="product__item__pic__hover">
+                                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="product__discount__item__text">
+                                        <span>Quản Trị Nguồn Nhân Lực</span>
+                                        <h5><a href="#">Profesional Human Resource Management</a></h5>
+                                        <div class="product__item__price">2.300.000 VND <span>2.700.000 VNDS</span></div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="filter__item">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-5">
+                            <div class="filter__sort">
+                                <span>Sắp xếp theo</span>
+                                <select>
+                                    <option value="0">Mặc định</option>
+                                    <option value="0">Default</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4">
+                            <div class="filter__found">
+                                @*<h6><span>Các</span> khóa học</h6>*@
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-3">
+                            <div class="filter__option">
+                                <span class="icon_grid-2x2"></span>
+                                <span class="icon_ul"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    @foreach (var item in Model)
+                    {
+                       @await Html.PartialAsync("PartialKhoaHoc", item)
+                    }
+
+                    <div class="product__pagination">
+                        @Html.PagedListPager(Model, page => Url.Action("KhoaHoc", new { page = page }), new X.PagedList.Web.Common.PagedListRenderOptions()
+                   {
+                       LiElementClasses = new List<String> { "page-item" },
+                       PageClasses = new List<String> { "page-link" }
+                   })
+                    </div>
+
+                    @*   @Html.PagedListPager(Model, page => Url.Action("DanhMucSanPham", "Admin", new { page = page }), new X.PagedList.Web.Common.PagedListRenderOptions()
+                    {
+                    LiElementClasses = new List<String> { "page-item" },
+                    PageClasses = new List<String> { "page-link" }
+                    })*@
+                </div>
+            </div>
+        </div>
+        </div>
+        </section>
+</>
+<!-- Product Section End -->

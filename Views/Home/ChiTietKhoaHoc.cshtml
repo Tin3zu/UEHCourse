@@ -1,0 +1,240 @@
+﻿@model UEHCourse.Models.Course
+@{
+    ViewData["Title"] = "ChiTietKhoaHoc";
+    Layout = "~/Views/Shared/_LayoutUEH.cshtml";
+}
+<section class="breadcrumb-section set-bg" data-setbg="https://img.pikbest.com/backgrounds/20190715/summer-training-course-enrollment-hd-background_1898741.jpg!bw700">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="breadcrumb__text">
+                    <h2 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;"> @Model.CourseName</Script></h2>
+                    <div class="breadcrumb__option">
+                        <a href="./index.html">Trang chủ</a> 
+                        <span>@Model.CourseName</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Breadcrumb Section End -->
+<!-- Product Details Section Begin -->
+<section class="product-details spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6">
+                <div class="product__details__pic">
+                    <div class="product__details__pic__item">
+                        <img class="product__details__pic__item--large" src="@Url.Content("../LayoutUser/img/" +Model.CourseImage)" >
+                    </div>
+                    <div class="product__details__pic__slider owl-carousel">
+                        <img data-imgbigurl="https://akdemy.net/wp-content/uploads/2023/07/es6-js.jpg"
+                             src="https://akdemy.net/wp-content/uploads/2023/07/es6-js.jpg" alt="">
+                        <img data-imgbigurl="https://sosanhgiakhoahoc.com/images/posts/2021/6/18/khoa-hoc-javascript-08.jpg"
+                             src="../LayoutUser/img/java1.jpg" alt="">
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <div class="product__details__text">
+                    <h3 style="font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif">@Model.CourseName</h3>
+                    <div class="product__details__rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                        <span>(18 bình luận)</span>
+                    </div>
+                    <div class="product__details__price">
+                        <script>
+                            // Chuyển đổi giá thành định dạng số có dấu chấm ngăn cách hàng nghìn
+                            var formattedPrice = @Json.Serialize(Model.Price);
+                            var formattedPriceString = parseFloat(formattedPrice).toLocaleString("vi-VN", { style: "currency", currency: "VND" });
+                            document.write(formattedPriceString);
+                        </script>
+                    </div>
+
+                    <p>@Model.Description</p>
+                    
+                   
+                    </div>
+                    <a href="#" class="primary-btn">Thêm vào giỏ</a>
+                    <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
+                    <ul>
+
+
+                        <li><b>Hình thức học</b> <span>Online/Offline</span></li>
+                        <li><b>Thời gian</b> <span>3 tháng</span></li>
+                        <li><b>Phát hành bởi</b> <span>Udemy</span></li>
+                        <div class="share">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-tiktok"></i></a>
+                            <a href="#"><i class="fa fa-youtube"></i></a>
+
+                        </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <div class="product__details__tab">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" data-toggle="tab" href="#tabs-1" role="tab"
+                               aria-selected="true">Mô tả</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#tabs-3" role="tab"
+                               aria-selected="false">Bình luận <span>(2)</span></a>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="tabs-1" role="tabpanel">
+                            <div class="product__details__tab__desc">
+                                <h6>Mô tả khóa học</h6>
+                                <p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+                                    @Model.Description
+                                </p>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="tabs-2" role="tabpanel">
+                        </div>
+                        <div class="tab-pane" id="tabs-3" role="tabpanel">
+                            <div class="product__details__tab__desc">
+                                <h6>Bình Luận</h6>
+                                <div id="reviews">
+                                    <div class="row">
+                                        <div class="col-sm-1">
+                                            <img src="https://bizweb.dktcdn.net/100/438/408/files/meme-meo-cute-yody-vn-47.jpg?v=1690276153750" alt="" class="rounded-circle reviews">
+                                        </div>
+                                        <div class="col-sm-11">
+                                            <p class="heading-md">Sikander Ali Haroon</p>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="far fa-star text-warning"></span>
+                                            <span style="color: gray;">3 ngày trước </span>
+                                            <p style="padding-top: 10px;">Tuyệt cú mèo</p>
+                                            <a href="#"><i class="fa fa-thumbs-up" style="color: gray;"></i></a>
+                                            <span style="font-size: 12px;">Hữu ích</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="row comment">
+                                        <div class="col-sm-1">
+                                            <img src="https://blogchiasekienthuc.com/wp-content/uploads/2022/11/anh-meme-meo-hai-huoc-27.jpg" alt="" class="rounded-circle reviews">
+                                        </div>
+                                        <div class="col-sm-11">
+                                            <p class="heading-md">Sikander Ali Haroon</p>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="far fa-star text-warning"></span>
+                                            <span style="color: gray;">1 tuần trước </span>
+                                            <p style="padding-top: 10px;">Mừ đỉm</p>
+                                            <a href="#"><i class="fa fa-thumbs-up" style="color: gray;"></i></a>
+                                            <span style="font-size: 12px;">Hữu ích</span>
+                                        </div>
+                                    </div>
+
+                                    <div id="evaluation">
+                                        <form>
+                                            <div class="form-group">
+                                                <label for="exampleFormControlTextarea1">Đánh giá của bạn</label>
+                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                            </div>
+                                        </form>
+                                        <button type="button" class="btn btn-info" style="float: right;">Gửi</button><br>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+<!-- Product Details Section End -->
+<!-- Related Product Section Begin -->
+<section class="related-product">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section-title related__product__title">
+                    <h2 style="font-family: Verdana, Geneva, Tahoma, sans-serif;">Khóa học có liên quan</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="product__item">
+                    <div class="product__item__pic set-bg" data-setbg="https://i.ytimg.com/vi/wem6468USVQ/maxresdefault.jpg">
+                        <ul class="product__item__pic__hover">
+                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="product__item__text">
+                        <h6><a href="#" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">AWS cho người mới bắt đầu</a></h6>
+                        <h5>1.699.000 VND</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="product__item">
+                    <div class="product__item__pic set-bg" data-setbg="https://thienanblog.com/wp-content/uploads/2017/10/react-logo.png">
+                        <ul class="product__item__pic__hover">
+                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="product__item__text">
+                        <h6><a href="#" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">React Ultimate - React.JS Cơ Bản Từ Z Đến A Cho Beginners</a></h6>
+                        <h5>599.000 VND</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="product__item">
+                    <div class="product__item__pic set-bg" data-setbg="https://media.geeksforgeeks.org/wp-content/uploads/20231223223806/SQL2.png">
+                        <ul class="product__item__pic__hover">
+                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="product__item__text">
+                        <h6><a href="#" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">SQL FOR DATA ANALYSIS – Thực chiến SQL qua Case Study</a></h6>
+                        <h5>4.200.000 VND</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="product__item">
+                    <div class="product__item__pic set-bg" data-setbg="https://maychusaigon.vn/wp-content/uploads/2023/09/chung-chi-it-la-gi-maychusaigon.jpg">
+                        <ul class="product__item__pic__hover">
+                            <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                            <li><a href="#"><i class="fa fa-retweet"></i></a></li>
+                            <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="product__item__text">
+                        <h6><a href="#" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Chứng chỉ ứng dụng CNTT cơ bản</a></h6>
+                        <h5>1.110.000 VND</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Related Product Section End -->

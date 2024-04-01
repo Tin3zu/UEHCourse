@@ -1,0 +1,321 @@
+﻿
+@{
+    ViewData["Title"] = "QuanLyGiaoDich";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1 style="font-weight: bold;">Quản lý giao dịch</h1>
+                </div>
+                <!--Filter-->
+                <div class="container">
+                    <div class="filter-bar">
+                        <div>
+                            <label for="magd">Mã GD:</label>
+                            <input class="search-magd" type="search" style="height: 25px; ">
+                        </div>
+                        <div>
+                            <label for="khachhang">Khách hàng:</label>
+                            <input class="search-khachhang" type="search" style="height: 25px;">
+                        </div>
+                        <div>
+                            <label for="ngaymua">Ngày mua:</label>
+                            <select id="ngaymua" name="ngaymua" style="height: 25px;">
+                                <option value="">Tất cả</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="trangthai">Trạng thái GD:</label>
+                            <select id="trangthai" name="trangthai">
+                                <option value="">Tất cả</option>
+                                <option value="">Hoàn thành</option>
+                                <option value="">Chờ</option>
+                            </select>
+                        </div>
+                        <button class="filter-button" type="button">
+                            <i class='bx bxs-filter-alt text-light text-center'>Lọc</i>
+                        </button>
+                    </div>
+                    <!--/Filter-->
+                </div>
+            </div>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <table id="example2" class="table table-bordered table-hover">
+                                <thead>
+                                    <tr style="background-color:#DB9D79">
+                                        <th>Mã GD</th>
+                                        <th>Khách hàng</th>
+                                        <th>Sản phẩm</th>
+                                        <th>Số lượng</th>
+                                        <th>Thành tiền (VNĐ)</th>
+                                        <th>Ngày mua</th>
+                                        <th>Trạng thái GD</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody style="background-color: white;">
+                                    <tr>
+                                        <td>HĐ001</td>
+                                        <td>Nguyễn Văn A</td>
+                                        <td>Introduction to Finance, Accounting, Modeling and Valuation</td>
+                                        <td>01</td>
+                                        <td>2.199.000</td>
+                                        <td>23/02/2024</td>
+                                        <td>Hoàn thành</td>
+                                        <td>
+                                            <div class="fix-trash">
+                                                <button class="fix" type="button">
+                                                    <i class='bx bxs-edit text-light'></i>
+                                                </button>
+                                                <button class="trash" type="button">
+                                                    <i class='bx bx-trash text-light'></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>HĐ002</td>
+                                        <td>Trần Thị B</td>
+                                        <td>Accounting & Financial Statement Analysis: Complete Training</td>
+                                        <td>01</td>
+                                        <td>1.349.000</td>
+                                        <td>25/02/2024</td>
+                                        <td>Hoàn thành</td>
+                                        <td>
+                                            <div class="fix-trash">
+                                                <button class="fix" type="button">
+                                                    <i class='bx bxs-edit text-light'></i>
+                                                </button>
+                                                <button class="trash" type="button">
+                                                    <i class='bx bx-trash text-light'></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>HĐ003</td>
+                                        <td>Lê Văn C</td>
+                                        <td>Financial Accounting: A Comprehensive Guide with E-book</td>
+                                        <td>01</td>
+                                        <td>1.499.000</td>
+                                        <td>29/02/2024</td>
+                                        <td>Hoàn thành</td>
+                                        <td>
+                                            <div class="fix-trash">
+                                                <button class="fix" type="button">
+                                                    <i class='bx bxs-edit text-light'></i>
+                                                </button>
+                                                <button class="trash" type="button">
+                                                    <i class='bx bx-trash text-light'></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>HĐ004</td>
+                                        <td>Phạm Thị D</td>
+                                        <td>Javascript cho người mới bắt đầu</td>
+                                        <td>01</td>
+                                        <td>1.299.000</td>
+                                        <td>16/03/2024</td>
+                                        <td>Hoàn thành</td>
+
+                                        <td>
+                                            <div class="fix-trash">
+                                                <button class="fix" type="button">
+                                                    <i class='bx bxs-edit text-light'></i>
+                                                </button>
+                                                <button class="trash" type="button">
+                                                    <i class='bx bx-trash text-light'></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>HĐ005</td>
+                                        <td>Hoàng Văn E</td>
+                                        <td>AWS Cloud for beginner (Vietnamese)</td>
+                                        <td>01</td>
+                                        <td>1.699.000</td>
+                                        <td>17/03/2024</td>
+                                        <td>Hoàn thành</td>
+
+                                        <td>
+                                            <div class="fix-trash">
+                                                <button class="fix" type="button">
+                                                    <i class='bx bxs-edit text-light'></i>
+                                                </button>
+                                                <button class="trash" type="button">
+                                                    <i class='bx bx-trash text-light'></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>HĐ006</td>
+                                        <td>Đỗ Thị F</td>
+                                        <td>React Ultimate - React.JS Cơ Bản Từ Z Đến A Cho Beginners</td>
+                                        <td>01</td>
+                                        <td>599.000</td>
+                                        <td>18/03/2024</td>
+                                        <td>Chờ</td>
+
+                                        <td>
+                                            <div class="fix-trash">
+                                                <button class="fix" type="button">
+                                                    <i class='bx bxs-edit text-light'></i>
+                                                </button>
+                                                <button class="trash" type="button">
+                                                    <i class='bx bx-trash text-light'></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>HĐ007</td>
+                                        <td>Vũ Văn G</td>
+                                        <td>The PMO Bootcamp (find the job, ace it, & master the PMO)</td>
+                                        <td>01</td>
+                                        <td>399.000</td>
+                                        <td>19/03/2024</td>
+                                        <td>Hoàn thành</td>
+
+                                        <td>
+                                            <div class="fix-trash">
+                                                <button class="fix" type="button">
+                                                    <i class='bx bxs-edit text-light'></i>
+                                                </button>
+                                                <button class="trash" type="button">
+                                                    <i class='bx bx-trash text-light'></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>HĐ008</td>
+                                        <td>Ngô Thị H</td>
+                                        <td>Business Analyst (BA) for Practitioners (BA thực chiến)</td>
+                                        <td>01</td>
+                                        <td>299.000</td>
+                                        <td>20/03/2024</td>
+                                        <td>Hoàn thành</td>
+
+                                        <td>
+                                            <div class="fix-trash">
+                                                <button class="fix" type="button">
+                                                    <i class='bx bxs-edit text-light'></i>
+                                                </button>
+                                                <button class="trash" type="button">
+                                                    <i class='bx bx-trash text-light'></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>HĐ009</td>
+                                        <td>Trần Văn I</td>
+                                        <td>Trở thành Project Manager (quản lý dự án) công ty phần mềm</td>
+                                        <td>01</td>
+                                        <td>1.399.000</td>
+                                        <td>21/03/2024</td>
+                                        <td>Hoàn thành</td>
+
+                                        <td>
+                                            <div class="fix-trash">
+                                                <button class="fix" type="button">
+                                                    <i class='bx bxs-edit text-light'></i>
+                                                </button>
+                                                <button class="trash" type="button">
+                                                    <i class='bx bx-trash text-light'></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>HĐ010</td>
+                                        <td>Lý Thị K</td>
+                                        <td>Trở thành Project Manager (quản lý dự án) công ty phần mềm</td>
+                                        <td>01</td>
+                                        <td>1.399.000</td>
+                                        <td>22/03/2024</td>
+                                        <td>Chờ</td>
+
+                                        <td>
+                                            <div class="fix-trash">
+                                                <button class="fix" type="button">
+                                                    <i class='bx bxs-edit text-light'></i>
+                                                </button>
+                                                <button class="trash" type="button">
+                                                    <i class='bx bx-trash text-light'></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                            <div class="row">
+                                <div class="col-sm-12 col-md-5">
+                                    <div class="dataTables_info" id="example2_info" role="status" aria-live="polite">Hiển thị 1 đến 10 giao dịch trong tổng số 10 giao dịch</div>
+                                </div>
+                                <div class="col-sm-12 col-md-7">
+                                    <div class="dataTables_paginate paging_simple_numbers" id="example2_paginate">
+                                        <ul class="pagination">
+                                            <li class="paginate_button page-item previous" id="example2_previous">
+                                                <a href="#" aria-controls="example2" data-dt-idx="0" tabindex="0" class="page-link1">Trước</a>
+                                            </li>
+                                            <li class="paginate_button page-item ">
+                                                <a href="#" aria-controls="example2" data-dt-idx="1" tabindex="0" class="page-link">1</a>
+                                            </li>
+                                            <li class="paginate_button page-item ">
+                                                <a href="#" aria-controls="example2" data-dt-idx="2" tabindex="0" class="page-link">2</a>
+                                            </li>
+                                            <li class="paginate_button page-item ">
+                                                <a href="#" aria-controls="example2" data-dt-idx="3" tabindex="0" class="page-link">3</a>
+                                            </li>
+                                            <li class="paginate_button page-item ">
+                                                <a href="#" aria-controls="example2" data-dt-idx="4" tabindex="0" class="page-link">4</a>
+                                            </li>
+                                            <li class="paginate_button page-item ">
+                                                <a href="#" aria-controls="example2" data-dt-idx="5" tabindex="0" class="page-link">5</a>
+                                            </li>
+                                            <li class="paginate_button page-item ">
+                                                <a href="#" aria-controls="example2" data-dt-idx="6" tabindex="0" class="page-link">6</a>
+                                            </li>
+                                            <li class="paginate_button page-item next" id="example2_next">
+                                                <a href="#" aria-controls="example2" data-dt-idx="7" tabindex="0" class="page-link1">Kế tiếp</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+<!-- /.content-wrapper -->

@@ -1,0 +1,269 @@
+﻿<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Ogani Template">
+    <meta name="keywords" content="Ogani, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ogani | Template</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="../LayoutUser/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="../LayoutUser/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="../LayoutUser/css/elegant-icons.css" type="text/css">
+    <link rel="stylesheet" href="../LayoutUser/css/nice-select.css" type="text/css">
+    <link rel="stylesheet" href="../LayoutUser/css/jquery-ui.min.css" type="text/css">
+    <link rel="stylesheet" href="../LayoutUser/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="../LayoutUser/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="../LayoutUser/css/style.css" type="text/css">
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Humberger Begin -->
+    <div class="humberger__menu__overlay"></div>
+    <div class="humberger__menu__wrapper">
+        <div class="humberger__menu__logo">
+            <a href="#"><img src="../LayoutUser/img/logo.g"  alt=""></a>
+        </div>
+        <div class="humberger__menu__cart">
+            <ul>
+                <li><a href="../giokhoahoc"><i class="fa fa-shopping-cart"></i> <span>0</span></a></li>
+            </ul>
+            <div class="header__cart__price">
+                <a href="../login" class="primary-btn">
+                    <span class="span"><ion-icon name="person-circle"></ion-icon> Bắt đầu </span>
+
+                </a>
+            </div>
+
+        </div>
+        <div class="humberger__menu__widget">
+        </div>
+        <nav class="humberger__menu__nav mobile-menu">
+            <ul>
+                <li class="active"><a href="../home">Trang chủ</a></li>
+                <li><a href="../khoahoc">Khóa học</a></li>
+
+                <li><a href="../blog">Blog</a></li>
+                <li><a href="../lienhe">Liên hệ</a></li>
+            </ul>
+        </nav>
+        <div id="mobile-menu-wrap">
+            <div class="header__top__right__social">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-pinterest-p"></i></a>
+            </div>
+
+            <div class="humberger__menu__contact">
+                <ul>
+                    <li><i class="fa fa-envelope"></i> hello@colorlib.com</li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Humberger End -->
+    <!-- Header Section Begin -->
+    <header class="header" data-header>
+        <div class="header__top" style="background-image: url(../LayoutUser/img/header-top-bg.png')">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6">
+                    </div>
+                    <div class="col-lg-6 col-md-6">
+                        <div class="header__top__right">
+                            <div class="header__top__right__social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-linkedin"></i></a>
+                                <a href="#"><i class="fa fa-pinterest-p"></i></a>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="head row">
+                <div class="col-lg-3">
+                    <div class="header__logo" >
+                        <a href="./index.html"><img src="../LayoutUser/img/Logo.jpg" style="width=130px; height=60px" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <nav class="header__menu">
+                        <ul>
+                            <li class="active"><a href="../home">Trang chủ</a></li>
+                            <li class="active"><a href="../khoahoc">Khóa học</a></li>
+
+                            <li class="active"><a href="../blog">Blog</a></li>
+                            <li class="active"><a href="../lienhe">Liên hệ</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-3">
+                    <div class="header__cart">
+
+                        <ul class="icon">
+                            <li class="icon">
+                                <a href="#" class="icon" onclick="focusSearch()">
+                                    <i class="fa fa-search"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../giokhoahoc" class="icon">
+                                    <i class="fa fa-shopping-cart"></i>
+                                    <span>0</span>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <div class="header__cart__price">
+                            <a href="../login" class="primary-btn">
+                                <span class="span">
+                                    <ion-icon name="person-circle" class="ion-icon"></ion-icon> Bắt đầu
+                                </span>
+
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="humberger__open">
+                    <i class="fa fa-bars"></i>
+                </div>
+            </div>
+
+        </div>
+    </header>
+    <section class="hero hero-normal">
+        <div class="container">
+            <div class="row">
+              @await Component.InvokeAsync("FieldMenu")
+
+                <div class="col-lg-9">
+                    <div class="hero__search">
+                        <div class="hero__search__form">
+                            <form action="#">
+
+                                <input type="text" placeholder="Tìm kiếm?">
+                                <button type="submit" class="site-btn" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Tìm kiếm</button>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Header Section End -->
+    <!-- Hero Section Begin -->
+    </section>
+    <!-- Hero Section End -->
+    @RenderBody()
+
+    <footer class="footer spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="footer__about">
+                        <div class="footer__about__logo">
+                            <a href="home.html"><img src="../LayoutUser/img/logotn.jpg" alt=""></a>
+                        </div>
+                        <ul>
+                            <li style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Địa chỉ: 279 Nguyễn Tri Phương, phường 5, quận 10, TP.HCM</li>
+                            <li>ĐT: +84 357760461</li>
+                            <li>Email: uehcourse@gmail.com</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6 offset-lg-1">
+                    <div class="footer__widget">
+                        <h6>Hữu ích</h6>
+                        <ul style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;font-size: 18px;">
+                            <li><a href="#">Về chúng tôi</a></li>
+                            <li><a href="#">Giới thiệu</a></li>
+                            <li><a href="#">Tuyển dụng</a></li>
+                            <li><a href="#">Điều kiện giao dịch</a></li>
+                            <li><a href="#">Chính sách thanh toán</a></li>
+                            <li><a href="#">Chính sách bảo vệ thông tin</a></li>
+                            <li><a href="#">Chính sách cấp chứng chỉ</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <div class="footer__widget">
+                        <h6 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Đăng ký để nhận tin mới nhất</h6>
+                        <p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Nhập email để nhận tin tức mới nhất và khuyến mãi siêu đặc biệt</p>
+                        <form action="#">
+                            <input type="text" placeholder="Nhập email">
+                            <button type="submit" class="site-btn" class="site-btn" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Đăng ký</button>
+                        </form>
+                        <div class="footer__widget__social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-instagram"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-pinterest"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="footer__copyright">
+                        <div class="footer__copyright__text">
+                            <p>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                Copyright &copy;
+                                <script>document.write(new Date().getFullYear());</script> All rights reserved <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">UEH Course</a>
+                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            </p>
+                        </div>
+                        <div class="footer__copyright__payment"><img src="../LayoutUser/img/payment-item.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
+    <!-- - #BACK TO TOP  -->
+
+    <a href="#top" class="back-top-btn active" aria-label="back top top" data-back-top-btn>
+        <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
+    </a>
+
+    <!-- Js Plugins -->
+    <script src="../LayoutUser/js/jquery-3.3.1.min.js"></script>
+    <script src="../LayoutUser/js/bootstrap.min.js"></script>
+    <script src="../LayoutUser/js/jquery.nice-select.min.js"></script>
+    <script src="../LayoutUser/js/jquery-ui.min.js"></script>
+    <script src="../LayoutUser/js/jquery.slicknav.js"></script>
+    <script src="../LayoutUser/js/mixitup.min.js"></script>
+    <script src="../LayoutUser/js/owl.carousel.min.js"></script>
+    <script src="../LayoutUser/js/main.js"></script>
+
+    <!--
+      - ionicon link
+    -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+</body>
+
+</html>

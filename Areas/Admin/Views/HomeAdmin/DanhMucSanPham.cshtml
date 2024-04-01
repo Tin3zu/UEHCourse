@@ -1,0 +1,152 @@
+﻿@using UEHCourse.Models;
+@using X.PagedList.Mvc.Core;
+@model X.PagedList.IPagedList<Course>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    ViewData["Title"] = "DanhMucSanPham";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1 style="font-weight: bold;">DANH SÁCH DANH MỤC SẢN PHẨM</h1>
+                </div>
+                <div class="col-sm-6 text-right">
+                    <!-- Thêm một cột phía bên phải -->
+                    <button class="add-button me-2" type="button">
+                        <a class="add" href="../admin/themmoisanpham">
+                            <img src="../LayoutAdmin/../LayoutAdmin/../LayoutAdmin/../LayoutUser/../LayoutAdmin/dist/img/circle-plus-solid.svg" height="40px" width="40px">
+                        </a>
+                    </button>
+                </div>
+                <!--Filter-->
+                <div class="container">
+                    <div class="filter-bar">
+                        <div>
+                            <label for="makhc">Mã KH:</label>
+                            <input class="search-makh" type="search" style="height: 25px">
+                        </div>
+                        <div>
+                            <label for="khoahoc">Khóa học:</label>
+                            <input class="search-course" type="search" style="height: 25px;">
+                        </div>
+                        <div>
+                            <label for="nhacungcap">Nhà cung cấp:</label>
+                            <select id="nhacungcap" name="nhacungcap" style="height: 25px">
+                                <option value="">Tất cả</option>
+                                <option value="">Udemy</option>
+                                <option value="">CBS </option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="hinhthuchoc">Hình thức học:</label>
+                            <select id="hinhthuchoc" name="hinhthuchoc" style="height: 25px">
+                                <option value="">Tất cả</option>
+                                <option value="">Online</option>
+                                <option value="">Offtine</option>
+                                <option value="">Online/Offtine</option>
+                            </select>
+                        </div>
+                        <button class="filter-button" type="button">
+                            <i class='bx bxs-filter-alt text-light text-center'>Lọc</i>
+                        </button>
+                    </div>
+                    <!--/Filter-->
+                </div>
+            </div>
+            </div>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <table id="example2" class="table table-bordered table-hover">
+                                <thead>
+                                    <tr style="background-color:#DB9D79">
+                                        <th>Mã khóa học</th>
+                                        <th>Nhà cung cấp</th>
+                                        <th>Tên khóa học</th>
+                                        <th>Lĩnh lực</th>
+                                        <th>Ngày tạo</th>
+                                        <th>Hình thức học</th>
+                                        <th>Học phí (VNĐ)</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody style="background-color:white">
+                            
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td>@Html.DisplayFor(modelItem => item.CourseId)</td>
+                                            <td>@Html.DisplayFor(modelItem => item.SupplierName)</td>
+                                            <td>@Html.DisplayFor(modelItem => item.CourseName)</td>
+                                            <td>@Html.DisplayFor(modelItem => item.FieldName)</td>
+                                            <td>@Html.DisplayFor(modelItem => item.DateCreated)</td>
+                                            <td>@Html.DisplayFor(modelItem => item.Status)</td>
+                                            <td>@(item.Price?.ToString("#,##0").Replace(",", "."))</td>
+                                            <td>
+                                                <div class="fix-trash">
+                                                    <a class="fix" href="../admin/suasanpham?id=@item.CourseId" type="button">
+                                                        <i class='bx bxs-edit text-light'></i>
+                                                    </a>
+                                                    <a class="trash" href="../admin/xoasanpham?id=@item.CourseId" type="button">
+                                                        <i class='bx bx-trash text-light'></i>
+                                                    </a>
+                                                   
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    }
+
+                                </tbody>
+                            </table>
+                            <div class="row">
+                                <div class="col-sm-12 col-md-5">
+                                    <div class="dataTables_info" id="example2_info" role="status" aria-live="polite">Hiển thị 1 đến 6 khóa học</div>
+                                </div>
+                                <div class="col-sm-12 col-md-7">
+                                    <div class="dataTables_paginate paging_simple_numbers" id="example2_paginate">
+                                        <ul class="pagination">
+
+                                            @Html.PagedListPager(Model, page => Url.Action("DanhMucSanPham", "Admin", new { page = page }), new X.PagedList.Web.Common.PagedListRenderOptions()
+                                       {
+                                           LiElementClasses = new List<String> { "page-item" },
+                                           PageClasses = new List<String> { "page-link" }
+                                       })
+
+                                        </ul>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+<!-- /.content-wrapper -->
+@*<div class="product__pagination">
+    @Html.PagedListPager(Model, page => Url.Action("DanhMucSanPham", new { page = page }))
+</div>*@
+
+

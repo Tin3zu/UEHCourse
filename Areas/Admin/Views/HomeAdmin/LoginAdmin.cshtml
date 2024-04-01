@@ -1,0 +1,79 @@
+﻿@{
+    Layout = null;
+}
+@model UEHCourse.Models.AdminModel
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Boottrap 5 Login page</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="LoginStyle.css">
+</head>
+<body>
+    <div class="row vh-100 g-0">
+        <div class="row align-items-center justify-content-center h-100 g-0 px-4 px-sm-0">
+            <div class="col col-sm-3 col-md-3 col-lg-3 col-xl-3">
+                <!-- logo-->
+                <a href="#" class="logo d-flex justify-content-center mb-1">
+                    <img src="../LayoutAdmin/dist/img/Logo.png" alt="" width="150">
+                </a>
+                <!-- logo-->
+                <div class="text-center">
+                    <h3 class="fw-bold">Quản lý UEH Course</h3>
+                    <p class="text-secondary">Đăng nhập tài khoản của bạn</p>
+                </div>
+                <!-- Form-->
+                @using (Html.BeginForm("Login", "admin", FormMethod.Post))
+                {
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">
+                            <i class='bx bxs-user-circle'></i>
+                        </span>
+                        @Html.TextBoxFor(x => x.UserName, new { @class = "form-control form-control-lg fs-6", type = "text", placeholder = "Tên đăng nhập", required = "required", autofocus = "autofocus" })
+                    </div>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text">
+                            <i class='bx bxs-lock'></i>
+                        </span>
+                        @Html.TextBoxFor(x => x.Password, new { @class = "form-control form-control-lg fs-6", type = "password", placeholder = "Mật khẩu"})                        
+                    </div>
+                    <div class="input-group mb-3 d-flex justify-content-between">
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="formCheck">
+                            <label for="formCheck" class="form-check-label text-secondary">
+                                <small>Lưu đăng nhập trên thiết bị này</small>
+                            </label>
+                        </div>
+                        <div>
+                            <small>
+                                <a href="#">Quên mật khẩu?</a>
+                            </small>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary btn-lg w-100" type="submit">Đăng nhập</button>                   
+                }
+                @* </form>*@
+                <!--/ Form-->
+                <div class="position-relative">
+                    <hr class="text-secondary divider">
+                    <div class="Divider-content-center"></div>
+                </div>
+                <!--/ Divider-->
+                <!-- Social login-->
+                <button class="btn btn-lg btn-outline-secondary btn-outline-custom w-100 mb-3">
+                    <i class='bx bxl-google text-danger me-1 fs-6'></i> Đăng nhập với Email
+                </button>
+                <!--/ Social login-->
+                <!-- Divider-->
+            </div>
+        </div>
+    </div>
+</body>
+</html>

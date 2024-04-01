@@ -1,0 +1,316 @@
+﻿
+@{
+    ViewData["Title"] = "DangTaiKhoaHoc";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div class="content-wrapper" style="min-height: 891.504px;">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1 style="font-weight: bold;">Danh sách khóa học</h1>
+                </div>
+                <div class="col-sm-6 text-right">
+                    <button class="add-button me-2" type="button">
+                        <a class="add" href="#">
+                            <img src="../LayoutAdmin/dist/img/circle-plus-solid.svg" height="40px" width="40px">
+                        </a>
+                    </button>
+                </div>
+                <!--Filter-->
+                <div class="container">
+                    <div class="filter-bar">
+                        <div>
+                            <label for="linhvuc">Lĩnh vực:</label>
+                            <select id="linhvuc" name="linhvuc" style="height: 25px;">
+                                <option value="">Tất cả</option>
+                                <option value="">Tài chính &amp; Kế toán</option>
+                                <option value="">CNTT &amp; Phần mềm</option>
+                                <option value="">Kinh doanh</option>
+                                <option value="">Tài chính &amp; nhân sự</option>
+                                <option value="">Quản trị nguồn nhân lực</option>
+                                <option value="">Tài chính &amp; Ngân hàng</option>
+                                <option value="">Ngôn ngữ</option>
+                                <option value="">Marketing</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="ngaydang">Ngày đăng:</label>
+                            <select id="ngaydang" name="ngaydang" style="height: 25px;">
+                                <option value="">Tất cả</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="tinhtrang">Tình trạng:</label>
+                            <select id="tinhtrang" name="tinhtrang" style="height: 25px;">
+                                <option value="">Tất cả</option>
+                                <option value="">Hoàn thành</option>
+                                <option value="">Chưa hoàn thành</option>
+                            </select>
+                        </div>
+                        <button class="filter-button" type="button">
+                            <i class="bx bxs-filter-alt text-light text-center">Lọc</i>
+                        </button>
+                    </div>
+                    <!--/.Filter-->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main content -->
+    <section class="content ">
+        <div class="container-fluid ">
+            <div class="row ">
+                <div class="col-12">
+                    <div class="card ">
+                        <!-- /.card-header -->
+                        <div class="card-body ">
+                            <table id="example2" class="table table-bordered table-hover ">
+                                <thead>
+                                    <tr style="background-color:#DB9D79">
+                                        <th>STT</th>
+                                        <th>Lĩnh vực</th>
+                                        <th>Tên khóa học</th>
+                                        <th>Số lượng học sinh</th>
+                                        <th>Tình trạng</th>
+                                        <th>Ngày đăng</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+
+                                <tbody style="background-color: white;">
+                                    <tr>
+                                        <td>01</td>
+                                        <td>Tài chính &amp; Kế toán</td>
+                                        <td>Introduction to Finance, Accounting, Modeling and Valuation</td>
+                                        <td></td>
+                                        <td>Hoàn thành</td>
+                                        <td>22/02/2024</td>
+                                        <td>
+                                            <div class="fix-trash">
+                                                <button class="fix" type="button">
+                                                    <i class="bx bxs-edit text-light"></i>
+                                                </button>
+                                                <button class="trash" type="button">
+                                                    <i class="bx bx-trash text-light"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>02</td>
+                                        <td>Tài chính &amp; Kế toán</td>
+                                        <td>Accounting &amp; Financial Statement Analysis: Complete Training</td>
+                                        <td></td>
+                                        <td>Hoàn thành</td>
+                                        <td>23/02/2024</td>
+                                        <td>
+                                            <div class="fix-trash">
+                                                <button class="fix" type="button">
+                                                    <i class="bx bxs-edit text-light"></i>
+                                                </button>
+                                                <button class="trash" type="button">
+                                                    <i class="bx bx-trash text-light"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>03</td>
+                                        <td>Tài chính &amp; Kế toán</td>
+                                        <td>Financial Accounting: A Comprehensive Guide with E-book</td>
+                                        <td></td>
+                                        <td>Hoàn thành</td>
+                                        <td>24/02/2024</td>
+                                        <td>
+                                            <div class="fix-trash">
+                                                <button class="fix" type="button">
+                                                    <i class="bx bxs-edit text-light"></i>
+                                                </button>
+                                                <button class="trash" type="button">
+                                                    <i class="bx bx-trash text-light"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>04</td>
+                                        <td>CNTT &amp; Phần mềm</td>
+                                        <td>Javascript cho người mới bắt đầu</td>
+                                        <td></td>
+                                        <td>Hoàn thành</td>
+                                        <td>25/02/2024</td>
+                                        <td>
+                                            <div class="fix-trash">
+                                                <button class="fix" type="button">
+                                                    <i class="bx bxs-edit text-light"></i>
+                                                </button>
+                                                <button class="trash" type="button">
+                                                    <i class="bx bx-trash text-light"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>05</td>
+                                        <td>CNTT &amp; Phần mềm</td>
+                                        <td>AWS Cloud for beginner (Vietnamese)</td>
+                                        <td></td>
+                                        <td>Hoàn thành</td>
+                                        <td>29/02/2024</td>
+                                        <td>
+                                            <div class="fix-trash">
+                                                <button class="fix" type="button">
+                                                    <i class="bx bxs-edit text-light"></i>
+                                                </button>
+                                                <button class="trash" type="button">
+                                                    <i class="bx bx-trash text-light"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>06</td>
+                                        <td>CNTT &amp; Phần mềm</td>
+                                        <td>React Ultimate - React.JS Cơ Bản Từ Z Đến A Cho Beginners</td>
+                                        <td></td>
+                                        <td>Hoàn thành</td>
+                                        <td>27/02/2024</td>
+                                        <td>
+                                            <div class="fix-trash">
+                                                <button class="fix" type="button">
+                                                    <i class="bx bxs-edit text-light"></i>
+                                                </button>
+                                                <button class="trash" type="button">
+                                                    <i class="bx bx-trash text-light"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>07</td>
+                                        <td>Kinh doanh</td>
+                                        <td>The PMO Bootcamp (find the job, ace it, &amp; master the PMO)</td>
+                                        <td></td>
+                                        <td>Hoàn thành</td>
+                                        <td>28/02/2024</td>
+                                        <td>
+                                            <div class="fix-trash">
+                                                <button class="fix" type="button">
+                                                    <i class="bx bxs-edit text-light"></i>
+                                                </button>
+                                                <button class="trash" type="button">
+                                                    <i class="bx bx-trash text-light"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>08</td>
+                                        <td>Kinh doanh</td>
+                                        <td>Business Analyst (BA) for Practitioners (BA thực chiến)</td>
+                                        <td></td>
+                                        <td>Hoàn thành</td>
+                                        <td>29/02/2024</td>
+                                        <td>
+                                            <div class="fix-trash">
+                                                <button class="fix" type="button">
+                                                    <i class="bx bxs-edit text-light"></i>
+                                                </button>
+                                                <button class="trash" type="button">
+                                                    <i class="bx bx-trash text-light"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>09</td>
+                                        <td>Kinh doanh</td>
+                                        <td>Trở thành Project Manager (quản lý dự án) công ty phần mềm</td>
+                                        <td></td>
+                                        <td>Hoàn thành</td>
+                                        <td>01/03/2024</td>
+                                        <td>
+                                            <div class="fix-trash">
+                                                <button class="fix" type="button">
+                                                    <i class="bx bxs-edit text-light"></i>
+                                                </button>
+                                                <button class="trash" type="button">
+                                                    <i class="bx bx-trash text-light"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td>Tài chính &amp; nhân sự</td>
+                                        <td>
+                                            Khóa CFA Explorer
+                                            Huấn luyện thực chiến đầu tư tài chính
+                                        </td>
+                                        <td></td>
+                                        <td>Hoàn thành</td>
+                                        <td>25/03/2024</td>
+                                        <td>
+                                            <div class="fix-trash">
+                                                <button class="fix" type="button">
+                                                    <i class="bx bxs-edit text-light"></i>
+                                                </button>
+                                                <button class="trash" type="button">
+                                                    <i class="bx bx-trash text-light"></i>
+                                                </button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="row">
+                                <div class="col-sm-12 col-md-5">
+                                    <div class="dataTables_info" id="example2_info" role="status" aria-live="polite">Hiển thị 1 đến 10 khóa học trong tổng số 10 khóa học</div>
+                                </div>
+                                <div class="col-sm-12 col-md-7">
+                                    <div class="dataTables_paginate paging_simple_numbers" id="example2_paginate">
+                                        <ul class="pagination">
+                                            <li class="paginate_button page-item previous" id="example2_previous">
+                                                <a href="#" aria-controls="example2" data-dt-idx="0" tabindex="0" class="page-link1">Trước</a>
+                                            </li>
+                                            <li class="paginate_button page-item ">
+                                                <a href="#" aria-controls="example2" data-dt-idx="1" tabindex="0" class="page-link">1</a>
+                                            </li>
+                                            <li class="paginate_button page-item ">
+                                                <a href="#" aria-controls="example2" data-dt-idx="2" tabindex="0" class="page-link">2</a>
+                                            </li>
+                                            <li class="paginate_button page-item ">
+                                                <a href="#" aria-controls="example2" data-dt-idx="3" tabindex="0" class="page-link">3</a>
+                                            </li>
+                                            <li class="paginate_button page-item ">
+                                                <a href="#" aria-controls="example2" data-dt-idx="4" tabindex="0" class="page-link">4</a>
+                                            </li>
+                                            <li class="paginate_button page-item ">
+                                                <a href="#" aria-controls="example2" data-dt-idx="5" tabindex="0" class="page-link">5</a>
+                                            </li>
+                                            <li class="paginate_button page-item ">
+                                                <a href="#" aria-controls="example2" data-dt-idx="6" tabindex="0" class="page-link">6</a>
+                                            </li>
+                                            <li class="paginate_button page-item next" id="example2_next">
+                                                <a href="#" aria-controls="example2" data-dt-idx="7" tabindex="0" class="page-link1">Kế tiếp</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.card-body -->
+                    </div>
+                    <!-- /.card -->
+                </div>
+                <!-- /.col -->
+            </div>
+            <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+</div>
